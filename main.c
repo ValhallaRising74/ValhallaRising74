@@ -1,4 +1,6 @@
 #include <windows.h>
+#include <stdio.h>
+#include <math>
 #include <stdlib.h>
 
 
@@ -35,8 +37,8 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
         "WindowsApp",
         "Calculadora",
         WS_OVERLAPPEDWINDOW,
-        350,                                                            /*X em relaÁ„o ao desktop*/
-        250,                                                            /*y em relaÁ„o ao desktop*/
+        350,                                                            /*X em rela√ß√£o ao desktop*/
+        250,                                                            /*y em rela√ß√£o ao desktop*/
         500,                                                            /*largura da janela*/
         600,                                                            /*altura da janela*/
         HWND_DESKTOP,
@@ -79,8 +81,8 @@ Parte 2 do Tut
 HINSTANCE g_inst;
 HWND EditTotal,Button1,Button2,Button3,ButtonDividir,Button4,Button5,Button6,ButtonVezes,Button7,Button8,Button9,ButtonMenos,ButtonPorcentagem,ButtonPonto,ButtonMais,ButtonIgual;
 
-/*esta funÁ„o sÛ serve para criar o conteudo dentro da janela principal (nao tem retorno)*/
-/*ir· criar duas EDITs e 4 BUTTONS, e mudar os respectivos tipos de letra de cada um*?
+/*esta fun√ß√£o s√≥ serve para criar o conteudo dentro da janela principal (nao tem retorno)*/
+/*ir√° criar duas EDITs e 4 BUTTONS, e mudar os respectivos tipos de letra de cada um*?
 void DesenharObjectos(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	EditTotal = CreateWindowEx (
@@ -233,7 +235,7 @@ int a = 1;
 char s_valor1[20] = "0", s_valor2[20] = "0", s_total[20] = "0";
 int valor1, valor2, total;
 
-//funÁ„o WindowProcedure
+//fun√ß√£o WindowProcedure
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
@@ -398,7 +400,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     }//switch (message)
     return 0;
 }
-Ola, sou bem iniciante em programaÁao queria saber se alguem poderia me dar uma ajuda to com esse cÛdigo em que a janela e os botıes ta tudo certo mas to com dificuldades na parte de comando, em que eu uso apenas uma editbox , e cada botao clicado apareÁa o numero e o operador escolido la e a apertar o botao "igual" venha o resultado como uma calculadora mesmo. alguem poderia me ajudar nessa parte do cÛdigo uso o devc++.
+Ola, sou bem iniciante em programa√ßao queria saber se alguem poderia me dar uma ajuda to com esse c√≥digo em que a janela e os bot√µes ta tudo certo mas to com dificuldades na parte de comando, em que eu uso apenas uma editbox , e cada botao clicado apare√ßa o numero e o operador escolido la e a apertar o botao "igual" venha o resultado como uma calculadora mesmo. alguem poderia me ajudar nessa parte do c√≥digo uso o devc++.
 
 <
 
@@ -407,7 +409,7 @@ Ola, sou bem iniciante em programaÁao queria saber se alguem poderia me dar uma 
 
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
-//funÁ„o WinMain
+//fun√ß√£o WinMain
 int WINAPI WinMain (HINSTANCE hThisInstance,
                     HINSTANCE hPrevInstance,
                     LPSTR lpszArgument,
@@ -438,8 +440,8 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
         "WindowsApp",
         "Calculadora",                                                  //titulo da janela
         WS_OVERLAPPEDWINDOW,                                            //estilo da janela
-        350,                                                            //X em relaÁ„o ao desktop
-        250,                                                            //y em relaÁ„o ao desktop
+        350,                                                            //X em rela√ß√£o ao desktop
+        250,                                                            //y em rela√ß√£o ao desktop
         500,                                                            //largura da janela
         600,                                                            //altura da janela
         HWND_DESKTOP,
@@ -482,8 +484,8 @@ Parte 2 do Tut
 HINSTANCE g_inst;
 HWND EditTotal,Button1,Button2,Button3,ButtonDividir,Button4,Button5,Button6,ButtonVezes,Button7,Button8,Button9,ButtonMenos,ButtonPorcentagem,ButtonPonto,ButtonMais,ButtonIgual;
 
-/*esta funÁ„o sÛ serve para criar o conteudo dentro da janela principal (nao tem retorno)*/
-/*ir· criar duas EDITs e 4 BUTTONS, e mudar os respectivos tipos de letra de cada um
+/*esta fun√ß√£o s√≥ serve para criar o conteudo dentro da janela principal (nao tem retorno)*/
+/*ir√° criar duas EDITs e 4 BUTTONS, e mudar os respectivos tipos de letra de cada um
 void DesenharObjectos(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)*/
 
     /*EditTotal = CreateWindowEx (
@@ -636,7 +638,7 @@ int a = 1;
 char s_valor1[20] = "0", s_valor2[20] = "0", s_total[20] = "0";
 int valor1, valor2, total;
 
-//funÁ„o WindowProcedure
+//fun√ß√£o WindowProcedure
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
