@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <locale.h>
+#include <string.h>
 
 int main(){
     int Idade, calculando, ano, exibe;
@@ -13,7 +14,7 @@ int main(){
     printf("Digite seu nome: ");
     scanf("%s",&nome);
     ano = 2024-Idade, calculando;
-    printf("Olá, %s,você tem %d anos ,Portanto, você nasceu no ano: %d",nome,Idade ,ano);
+    printf("OlÃ¡, %s,vocÃª tem %d anos ,Portanto, vocÃª nasceu no ano: %d",nome,Idade ,ano);
     system("pause>>NULL");
     return 0;
 }
